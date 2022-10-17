@@ -44,7 +44,10 @@ function Sidebar({ open, setOpen }: Props) {
           >
             <Dialog.Panel className="relative flex w-full max-w-xs flex-col space-y-2 overflow-y-auto bg-white pb-12 shadow-xl">
               {/* Close button */}
-              <button className="hover-opacity flex h-12 w-12 self-end">
+              <button
+                className="hover-opacity flex h-12 w-12 self-end"
+                onClick={() => setOpen(false)}
+              >
                 <XMarkIcon className="m-auto h-6 w-6" />
               </button>
 
