@@ -7,3 +7,9 @@
     @apply font-OpenSans text-gray-800;
   }
 }
+
+@layer utilities {
+  .hover-opacity {
+    @apply transition-opacity duration-100 hover:opacity-60 focus:opacity-60;
+  }
+}

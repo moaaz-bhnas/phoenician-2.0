@@ -5,8 +5,8 @@ type Props = {};
 
 function SidebarToggler({}: Props) {
   return (
-    <button className="w-12 h-12 flex" type="button">
-      <Bars3Icon className="w-5 m-auto" />
+    <button className="hover-opacity flex h-12 w-12" type="button">
+      <Bars3Icon className="m-auto h-5 w-5" />
     </button>
   );
 }
