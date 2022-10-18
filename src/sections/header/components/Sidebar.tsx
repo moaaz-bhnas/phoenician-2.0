@@ -4,26 +4,15 @@ import Image from "next/future/image";
 import Link from "next/link";
 import { Dispatch, Fragment, memo, SetStateAction } from "react";
 import ProductsGrid from "./ProductsGrid";
+import { NavigationLink } from "../Header";
 
 type Props = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
+  navigationLinks: NavigationLink[];
 };
 
-const links = [
-  {
-    label: "Mission",
-    href: "/mission",
-    icon: "/images/nav-links/mission-colored-2.svg",
-  },
-  {
-    label: "Contact Us",
-    href: "/contact-us",
-    icon: "/images/nav-links/contact-colored-2.svg",
-  },
-];
-
-function Sidebar({ open, setOpen }: Props) {
+function Sidebar({ open, setOpen, navigationLinks }: Props) {
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog onClose={setOpen}>
@@ -74,7 +63,7 @@ function Sidebar({ open, setOpen }: Props) {
                 <hr className="my-4" />
 
                 <ul>
-                  {links.map((link) => (
+                  {navigationLinks.map((link) => (
                     <li key={link.label}>
                       <Link href={link.href}>
                         <a className="-mx-2 flex rounded p-2 transition hover:bg-blue-200">
