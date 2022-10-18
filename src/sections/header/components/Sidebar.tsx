@@ -3,17 +3,24 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/future/image";
 import Link from "next/link";
 import { Dispatch, Fragment, memo, SetStateAction } from "react";
+import ProductsGrid from "./ProductsGrid";
 
 type Props = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-const products = [
-  { name: "Product 1", handle: "product-1", src: "/images/product-1.webp" },
-  { name: "Product 2", handle: "product-2", src: "/images/product-2.webp" },
-  { name: "Product 3", handle: "product-3", src: "/images/product-3.webp" },
-  { name: "Product 4", handle: "product-4", src: "/images/product-4.webp" },
+const links = [
+  {
+    label: "Mission",
+    href: "/mission",
+    icon: "/images/nav-links/mission-colored-2.svg",
+  },
+  {
+    label: "Contact Us",
+    href: "/contact-us",
+    icon: "/images/nav-links/contact-colored-2.svg",
+  },
 ];
 
 function Sidebar({ open, setOpen }: Props) {
@@ -53,23 +60,33 @@ function Sidebar({ open, setOpen }: Props) {
 
               <div className="px-4">
                 {/* Products grid */}
-                <ul className="grid grid-cols-2 gap-4">
-                  {products.map((product) => (
-                    <li key={product.name}>
-                      <Link href={`/products/${product.handle}`}>
-                        <a className="space-y-1 text-sm">
-                          <div className="aspect-square">
-                            <Image
-                              className="h-full w-full rounded-md object-cover"
-                              src={product.src}
-                              alt=""
-                              width={0}
-                              height={0}
-                              sizes="160px"
-                            />
-                          </div>
+                <ProductsGrid />
 
-                          <p className="font-semibold">{product.name}</p>
+                <hr className="my-4" />
+
+                {/* All products button */}
+                <Link href="/products">
+                  <a className="block rounded bg-blue-800 p-2 text-center text-white transition hover:bg-blue-600 focus:bg-blue-600">
+                    All products
+                  </a>
+                </Link>
+
+                <hr className="my-4" />
+
+                <ul>
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <Link href={link.href}>
+                        <a className="-mx-2 flex rounded p-2 transition hover:bg-blue-200">
+                          <Image
+                            src={link.icon}
+                            alt=""
+                            width={24}
+                            height={24}
+                          />
+                          <span className="ml-2 font-semibold">
+                            {link.label}
+                          </span>
                         </a>
                       </Link>
                     </li>
