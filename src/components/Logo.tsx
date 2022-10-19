@@ -9,7 +9,7 @@ type Props = {
 function Logo({ className = "" }: Props) {
   return (
     <Image
-      className={classNames("m-auto h-5 w-5 lg:h-6 lg:w-6", className)}
+      className={classNames("m-auto h-5 w-5 lg:h-7 lg:w-7", className)}
       src={"/images/logo.svg"}
       alt=""
       width={0}

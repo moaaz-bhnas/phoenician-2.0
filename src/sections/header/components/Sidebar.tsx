@@ -66,16 +66,14 @@ function Sidebar({ open, setOpen, navigationLinks }: Props) {
                   {navigationLinks.map((link) => (
                     <li key={link.label}>
                       <Link href={link.href}>
-                        <a className="-mx-2 flex rounded p-2 transition hover:bg-blue-200">
+                        <a className="-mx-2 flex gap-2 rounded p-2 transition hover:bg-blue-200">
                           <Image
                             src={link.icon}
                             alt=""
                             width={24}
                             height={24}
                           />
-                          <span className="ml-2 font-semibold">
-                            {link.label}
-                          </span>
+                          <span className="font-semibold">{link.label}</span>
                         </a>
                       </Link>
                     </li>

@@ -54,22 +54,24 @@ function Header({}: Props) {
           </a>
         </Link>
 
-        <div className="ml-3 hidden lg:block">
+        <div className="ml-4 mr-auto hidden gap-4 lg:flex">
           <ProductsPopover />
-        </div>
 
-        {/* Desktop navigation links */}
-        <ul className="mr-auto ml-3 hidden lg:flex">
-          {navigationLinks.map((link, index) => (
-            <li className={index !== 0 ? "ml-3" : ""}>
-              <Link href={link.href}>
-                <a className="flex h-12 items-center text-sm font-medium">
-                  {link.label}
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+          <span className="self-center text-gray-400">|</span>
+
+          {/* Desktop navigation links */}
+          <ul className="flex gap-4">
+            {navigationLinks.map((link, index) => (
+              <li key={link.href}>
+                <Link href={link.href}>
+                  <a className="flex h-12 items-center text-sm font-medium">
+                    {link.label}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         {/* Language */}
         <button
