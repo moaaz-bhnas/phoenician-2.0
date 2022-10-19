@@ -1,6 +1,6 @@
 import Image from "next/future/image";
 import { memo } from "react";
-import classNames from "../helper-functions/classNames";
+import classNames from "helper-functions/classNames";
 
 type Props = {
   className?: string;

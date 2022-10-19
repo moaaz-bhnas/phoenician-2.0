@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { memo, useState } from "react";
-import Logo from "../../components/Logo";
-import classNames from "../../helper-functions/classNames";
-import ProductsPopover from "./components/ProductsPopover";
-import Sidebar from "./components/Sidebar";
-import SidebarToggler from "./components/SidebarToggler";
+import Logo from "components/Logo";
+import ProductsPopover from "sections/header/components/ProductsPopover";
+import Sidebar from "sections/header/components/Sidebar";
+import SidebarToggler from "sections/header/components/SidebarToggler";
 
 type Props = {};
 
@@ -61,10 +60,10 @@ function Header({}: Props) {
 
           {/* Desktop navigation links */}
           <ul className="flex gap-4">
-            {navigationLinks.map((link, index) => (
+            {navigationLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href}>
-                  <a className="flex h-12 items-center text-sm font-medium">
+                  <a className="hover-opacity flex h-12 items-center text-sm font-medium">
                     {link.label}
                   </a>
                 </Link>

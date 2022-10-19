@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { memo, ReactNode } from "react";
-import Header from "../sections/header/Header";
-import Container from "./Container";
+import Header from "sections/header/Header";
+import Container from "components/Container";
 
 type Props = {
   children?: ReactNode;

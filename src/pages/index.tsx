@@ -1,7 +1,5 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Container from "../components/Container";
-import PageLayout from "../components/PageLayout";
+import Container from "components/Container";
+import PageLayout from "components/PageLayout";
 
 function HomePage() {
   return (

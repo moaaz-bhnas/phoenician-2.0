@@ -1,5 +1,5 @@
 import { memo, ReactNode } from "react";
-import classNames from "../helper-functions/classNames";
+import classNames from "helper-functions/classNames";
 
 type Props = {
   children: ReactNode;
