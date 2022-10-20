@@ -44,7 +44,7 @@ function ProductsPopover({}: Props) {
                   />
                   <Container>
                     <div className="relative flex flex-col space-y-6">
-                      <ul className="flex justify-between gap-8">
+                      <ul className="flex justify-between gap-4 lg:gap-8">
                         {products.map((product) => (
                           <li key={product.handle} className="flex-1">
                             <Link href={`/products/${product.handle}`}>

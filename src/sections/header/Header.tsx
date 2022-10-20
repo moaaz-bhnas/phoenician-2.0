@@ -35,7 +35,7 @@ function Header({}: Props) {
 
       <nav className="flex justify-between border-b" aria-label="Main">
         {/* Sidebar toggler button */}
-        <div className="-ml-3.5 lg:hidden">
+        <div className="-ml-3.5 sm:hidden">
           <SidebarToggler setOpen={setSidebarOpen} />
         </div>
 
@@ -48,12 +48,12 @@ function Header({}: Props) {
 
         {/* Logo */}
         <Link href={"/"}>
-          <a className="hover-opacity flex h-12 w-12 lg:-ml-2.5">
+          <a className="hover-opacity flex h-12 w-12 sm:-ml-2.5">
             <Logo />
           </a>
         </Link>
 
-        <div className="ml-4 mr-auto hidden gap-4 lg:flex">
+        <div className="ml-4 mr-auto hidden gap-4 sm:flex">
           <ProductsPopover />
 
           <span className="self-center text-gray-400">|</span>
