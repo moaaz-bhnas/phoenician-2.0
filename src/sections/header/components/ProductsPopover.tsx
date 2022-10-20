@@ -35,25 +35,36 @@ function ProductsPopover({}: Props) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Popover.Panel className="absolute inset-x-0">
+            <Popover.Panel className="absolute inset-x-0 mt-0.5 bg-white">
               {({ close }) => (
                 <>
                   <div
                     className="absolute inset-0 top-1/2 bg-white shadow"
                     aria-hidden="true"
                   />
-                  <Container className="relative">
-                    <ul className="flex justify-between gap-8">
-                      {products.map((product) => (
-                        <li key={product.handle} className="flex-1">
-                          <Link href={`/products/${product.handle}`}>
-                            <a>
-                              <ProductItem product={product} />
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                  <Container>
+                    <div className="relative flex flex-col space-y-6">
+                      <ul className="flex justify-between gap-8">
+                        {products.map((product) => (
+                          <li key={product.handle} className="flex-1">
+                            <Link href={`/products/${product.handle}`}>
+                              <a onClick={() => close()}>
+                                <ProductItem product={product} />
+                              </a>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <Link href={"/products"}>
+                        <a
+                          className="btn self-end px-10"
+                          onClick={() => close()}
+                        >
+                          Show all
+                        </a>
+                      </Link>
+                    </div>
                   </Container>
                 </>
               )}

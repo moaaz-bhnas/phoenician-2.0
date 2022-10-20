@@ -55,9 +55,7 @@ function Sidebar({ open, setOpen, navigationLinks }: Props) {
 
                 {/* All products button */}
                 <Link href="/products">
-                  <a className="block rounded bg-blue-800 p-2 text-center text-white transition hover:bg-blue-600 focus:bg-blue-600">
-                    All products
-                  </a>
+                  <a className="btn">All products</a>
                 </Link>
 
                 <hr className="my-4" />

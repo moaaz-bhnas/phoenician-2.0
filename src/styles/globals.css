@@ -8,6 +8,12 @@
   }
 }
 
+@layer components {
+  .btn {
+    @apply flex justify-center rounded bg-blue-800 py-2 px-6 text-white transition hover:bg-blue-600 focus:bg-blue-600;
+  }
+}
+
 @layer utilities {
   .hover-opacity {
     @apply transition-opacity duration-100 hover:opacity-60 focus:opacity-60;

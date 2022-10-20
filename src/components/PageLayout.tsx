@@ -19,7 +19,7 @@ function Layout({ children, title }: Props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <Container className="border-b !py-0">
+      <Container className="!py-0">
         <Header />
       </Container>
       <main>{children}</main>
