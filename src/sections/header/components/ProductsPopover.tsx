@@ -11,12 +11,12 @@ type Props = {};
 
 function ProductsPopover({}: Props) {
   return (
-    <Popover>
+    <Popover className="flex">
       {({ open }) => (
         <>
           <Popover.Button
             className={classNames(
-              "flex h-12 items-center border-b-2 text-sm font-medium focus:border-blue-900 focus:text-blue-900 focus:outline-none",
+              "flex items-center border-b-2 text-sm font-semibold hover:border-blue-900 hover:text-blue-900 focus:border-blue-900 focus:text-blue-900 focus:outline-none",
               open
                 ? "border-blue-900 text-blue-900 outline-none"
                 : "border-transparent"
@@ -35,7 +35,7 @@ function ProductsPopover({}: Props) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Popover.Panel className="absolute inset-x-0 mt-0.5 bg-white">
+            <Popover.Panel className="absolute inset-x-0 top-16 mt-0.5 bg-white">
               {({ close }) => (
                 <>
                   <div

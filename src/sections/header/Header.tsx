@@ -30,10 +30,10 @@ function Header({}: Props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <header className="h-12">
+    <header>
       <h1 className="sr-only">Phoenician</h1>
 
-      <nav className="flex justify-between border-b" aria-label="Main">
+      <nav className="flex h-16 justify-between border-b" aria-label="Main">
         {/* Sidebar toggler button */}
         <div className="-ml-3.5 sm:hidden">
           <SidebarToggler setOpen={setSidebarOpen} />
@@ -48,12 +48,12 @@ function Header({}: Props) {
 
         {/* Logo */}
         <Link href={"/"}>
-          <a className="hover-opacity flex h-12 w-12 sm:-ml-2.5">
+          <a className="hover-opacity flex px-2 sm:-ml-2">
             <Logo />
           </a>
         </Link>
 
-        <div className="ml-4 mr-auto hidden gap-4 sm:flex">
+        <div className="ml-6 mr-auto hidden gap-4 sm:flex">
           <ProductsPopover />
 
           <span className="self-center text-gray-400">|</span>
@@ -61,9 +61,9 @@ function Header({}: Props) {
           {/* Desktop navigation links */}
           <ul className="flex gap-4">
             {navigationLinks.map((link) => (
-              <li key={link.href}>
+              <li key={link.href} className="flex">
                 <Link href={link.href}>
-                  <a className="hover-opacity flex h-12 items-center text-sm font-medium">
+                  <a className="hover-opacity flex items-center text-sm font-semibold">
                     {link.label}
                   </a>
                 </Link>
