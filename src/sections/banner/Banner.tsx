@@ -1,4 +1,3 @@
-import Image from "next/future/image";
 import { memo } from "react";
 import Grid from "./components/Grid";
 
@@ -12,7 +11,7 @@ function Banner({}: Props) {
           Phoenician Marine Enginnering
         </p>
         <p className="lg:text-lg">
-          World class solutions to your the most challenging problems.
+          World class solutions to your most challenging problems.
         </p>
       </div>
       <Grid />

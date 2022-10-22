@@ -13,7 +13,7 @@ const images = [
 
 function Grid({}: Props) {
   return (
-    <ul className="grid grid-cols-2 grid-rows-2 gap-2 lg:max-h-[calc(100vh-12rem)] lg:min-h-[32rem]">
+    <ul className="grid grid-cols-2 grid-rows-2 gap-2 lg:max-h-[calc(100vh-12rem)] lg:min-h-[32rem] lg:gap-3">
       {images.map((image, index) => (
         <li
           className={classNames(index === 1 ? "row-span-2" : "")}
@@ -22,7 +22,7 @@ function Grid({}: Props) {
           <Link href="/products">
             <a className="hover-opacity">
               <Image
-                className="h-full w-full object-cover"
+                className="h-full w-full rounded object-cover"
                 src={image.src}
                 alt={image.alt}
                 width="0"
