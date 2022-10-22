@@ -1,4 +1,3 @@
-import Image from "next/future/image";
 import Link from "next/link";
 import { memo } from "react";
 import ProductItem from "components/ProductItem";
@@ -12,7 +11,7 @@ function ProductsGrid({}: Props) {
       {products.map((product) => (
         <li key={product.handle}>
           <Link href={`/products/${product.handle}`}>
-            <a className="space-y-1 text-sm">
+            <a className="hover-opacity space-y-1 text-sm">
               <ProductItem product={product} />
             </a>
           </Link>

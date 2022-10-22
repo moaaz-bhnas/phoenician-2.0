@@ -48,7 +48,10 @@ function ProductsPopover({}: Props) {
                         {products.map((product) => (
                           <li key={product.handle} className="flex-1">
                             <Link href={`/products/${product.handle}`}>
-                              <a onClick={() => close()}>
+                              <a
+                                className="hover-opacity"
+                                onClick={() => close()}
+                              >
                                 <ProductItem product={product} />
                               </a>
                             </Link>

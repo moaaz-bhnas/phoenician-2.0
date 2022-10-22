@@ -16,6 +16,6 @@
 
 @layer utilities {
   .hover-opacity {
-    @apply transition-opacity duration-100 hover:opacity-60 focus:opacity-60;
+    @apply transition-opacity duration-100 hover:opacity-80 focus:opacity-80;
   }
 }
