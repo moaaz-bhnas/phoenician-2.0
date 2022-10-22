@@ -35,7 +35,7 @@ function Header({}: Props) {
 
       <nav className="flex h-16 justify-between border-b" aria-label="Main">
         {/* Sidebar toggler button */}
-        <div className="-ml-3.5 sm:hidden">
+        <div className="-ml-3 flex sm:hidden">
           <SidebarToggler setOpen={setSidebarOpen} />
         </div>
 

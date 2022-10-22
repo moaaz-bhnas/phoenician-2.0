@@ -8,7 +8,7 @@ type Props = {
 function SidebarToggler({ setOpen }: Props) {
   return (
     <button
-      className="hover-opacity flex h-12 w-12"
+      className="hover-opacity flex px-3"
       type="button"
       onClick={() => setOpen((prevOpen) => !prevOpen)}
     >
