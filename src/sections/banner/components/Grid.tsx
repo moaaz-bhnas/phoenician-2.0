@@ -19,7 +19,7 @@ function Grid({}: Props) {
           className={classNames(index === 1 ? "row-span-2" : "")}
           key={image.src}
         >
-          <Link href="/products">
+          <Link href="/services">
             <a className="hover-opacity">
               <Image
                 className="h-full w-full rounded object-cover"

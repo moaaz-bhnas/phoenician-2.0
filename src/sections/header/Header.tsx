@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { memo, useState } from "react";
 import Logo from "components/Logo";
-import ProductsPopover from "sections/header/components/ProductsPopover";
+import ServicesPopover from "sections/header/components/ServicesPopover";
 import Sidebar from "sections/header/components/Sidebar";
 import SidebarToggler from "sections/header/components/SidebarToggler";
 
@@ -54,7 +54,7 @@ function Header({}: Props) {
         </Link>
 
         <div className="ml-6 mr-auto hidden gap-4 sm:flex">
-          <ProductsPopover />
+          <ServicesPopover />
 
           <span className="self-center text-gray-400">|</span>
 

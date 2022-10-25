@@ -3,13 +3,13 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Fragment, memo } from "react";
 import Container from "components/Container";
 import classNames from "helper-functions/classNames";
-import products from "data/products.json";
+import services from "data/services.json";
 import Link from "next/link";
-import ProductItem from "components/ProductItem";
+import ServiceItem from "components/ServiceItem";
 
 type Props = {};
 
-function ProductsPopover({}: Props) {
+function ServicesPopover({}: Props) {
   return (
     <Popover className="flex">
       {({ open }) => (
@@ -22,7 +22,7 @@ function ProductsPopover({}: Props) {
                 : "border-transparent"
             )}
           >
-            Products
+            Services
             <ChevronDownIcon className="ml-1 w-4" />
           </Popover.Button>
 
@@ -45,21 +45,21 @@ function ProductsPopover({}: Props) {
                   <Container>
                     <div className="relative flex flex-col space-y-6">
                       <ul className="flex justify-between gap-4 lg:gap-8">
-                        {products.map((product) => (
-                          <li key={product.handle} className="flex-1">
-                            <Link href={`/products/${product.handle}`}>
+                        {services.map((service) => (
+                          <li key={service.handle} className="flex-1">
+                            <Link href={`/services/${service.handle}`}>
                               <a
                                 className="hover-opacity"
                                 onClick={() => close()}
                               >
-                                <ProductItem product={product} />
+                                <ServiceItem service={service} />
                               </a>
                             </Link>
                           </li>
                         ))}
                       </ul>
 
-                      <Link href={"/products"}>
+                      <Link href={"/services"}>
                         <a
                           className="btn self-end px-10"
                           onClick={() => close()}
@@ -79,4 +79,4 @@ function ProductsPopover({}: Props) {
   );
 }
 
-export default memo(ProductsPopover);
+export default memo(ServicesPopover);

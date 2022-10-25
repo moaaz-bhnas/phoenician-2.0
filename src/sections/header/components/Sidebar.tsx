@@ -3,7 +3,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/future/image";
 import Link from "next/link";
 import { Dispatch, Fragment, memo, SetStateAction } from "react";
-import ProductsGrid from "sections/header/components/ProductsGrid";
+import ServicesGrid from "sections/header/components/ServicesGrid";
 import { NavigationLink } from "sections/header/Header";
 
 type Props = {
@@ -48,14 +48,14 @@ function Sidebar({ open, setOpen, navigationLinks }: Props) {
               </button>
 
               <div className="px-4">
-                {/* Products grid */}
-                <ProductsGrid />
+                {/* Services grid */}
+                <ServicesGrid />
 
                 <hr className="my-4" />
 
-                {/* All products button */}
-                <Link href="/products">
-                  <a className="btn">All products</a>
+                {/* All services button */}
+                <Link href="/services">
+                  <a className="btn">All services</a>
                 </Link>
 
                 <hr className="my-4" />
