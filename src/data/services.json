@@ -15,25 +15,16 @@
     "images": ["/images/fixed-marine/1.webp"]
   },
   {
-    "handle": "fixed-marine",
-    "name": "Fixed Marine",
-    "description": [
-      "We do fixed type marine, using piles, steel beams and jack hammers.",
-      "Our first project of fixed type marine was at Ras Laffan in the northern part of Qatar."
-    ],
-    "images": ["/images/fixed-marine/1.webp"]
-  },
-  {
     "handle": "boat-and-jet-ski-lift",
-    "name": "Boat & Jet Ski Left",
+    "name": "Boat & Jet Ski Lift",
     "description": [
       "There is finally an alternative to the unsightly, metal contraption that spoils your waterfront view. Gone are the days of ducking under, or stepping over beams to access your vessel. No more leveling problems, tangled wires or grease fittings."
     ],
     "images": ["/images/boat-and-jet-ski-lift/1.webp"]
   },
   {
-    "handle": "sea-shore-maintenance",
-    "name": "Sea Shore Maintenance",
+    "handle": "shore-maintenance",
+    "name": "Shore Maintenance",
     "description": [],
     "images": ["/images/sea-shore-maintenance/1.webp"]
   }
