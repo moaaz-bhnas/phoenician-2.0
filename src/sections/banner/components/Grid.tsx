@@ -6,9 +6,9 @@ import { memo } from "react";
 type Props = {};
 
 const images = [
-  { src: "/images/grid/grid-2.jpg", alt: "" },
-  { src: "/images/grid/grid-1.jpeg", alt: "" },
-  { src: "/images/grid/grid-3.jpg", alt: "" },
+  { src: "/images/grid/grid-2.webp", alt: "" },
+  { src: "/images/grid/grid-1.webp", alt: "" },
+  { src: "/images/grid/grid-3.webp", alt: "" },
 ];
 
 function Grid({}: Props) {
