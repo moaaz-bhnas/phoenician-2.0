@@ -1,6 +1,7 @@
 import Image from "next/future/image";
 import { memo } from "react";
 import { Service } from "interfaces/service";
+import withNonBreakingSpaces from "helper-functions/withNonBreakingSpaces";
 
 type Props = {
   service: Service;
@@ -8,7 +9,7 @@ type Props = {
 
 function ServiceItem({ service }: Props) {
   return (
-    <figure className="space-y-0.5 lg:space-y-2">
+    <figure className="space-y-1 lg:space-y-2">
       <div className="aspect-[10/8]">
         <Image
           className="h-full w-full rounded-md object-cover"
@@ -22,7 +23,7 @@ function ServiceItem({ service }: Props) {
       </div>
 
       <figcaption className="text-sm font-semibold lg:text-base">
-        {service.name}
+        {withNonBreakingSpaces(service.name)}
       </figcaption>
     </figure>
   );

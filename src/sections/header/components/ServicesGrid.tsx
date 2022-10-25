@@ -11,7 +11,7 @@ function ServicesGrid({}: Props) {
       {services.map((service) => (
         <li key={service.handle}>
           <Link href={`/services/${service.handle}`}>
-            <a className="hover-opacity space-y-1 text-sm">
+            <a className="hover-opacity space-y-1 text-xs">
               <ServiceItem service={service} />
             </a>
           </Link>

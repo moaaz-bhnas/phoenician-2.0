@@ -27,5 +27,29 @@
     "name": "Shore Maintenance",
     "description": [],
     "images": ["/images/sea-shore-maintenance/1.webp"]
+  },
+  {
+    "handle": "marine-lighting",
+    "name": "Marine Lighting",
+    "description": [],
+    "images": ["/images/marine-lighting/1.webp"]
+  },
+  {
+    "handle": "sliding-ramp",
+    "name": "Sliding Ramp",
+    "description": [],
+    "images": ["/images/sliding-ramp/1.webp"]
+  },
+  {
+    "handle": "piling-works",
+    "name": "Piling Works",
+    "description": [],
+    "images": ["/images/piling-works/1.webp"]
+  },
+  {
+    "handle": "walkway-platforms",
+    "name": "Walkway Platforms",
+    "description": [],
+    "images": ["/images/walkway-platforms/1.webp"]
   }
 ]
